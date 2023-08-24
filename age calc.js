@@ -151,8 +151,12 @@ function age_clac() {
                 }
             }
         }
+    } else {
+        for (let i=0; i<document.getElementsByClassName("result").length; i++){
+            document.getElementsByClassName("result")[i].innerHTML = "--"
+        }
     }
-}
+} 
 
 var date_check = document.getElementById("submitBtn").addEventListener('click', age_clac);
 for (let j=0; j<document.getElementsByClassName("input").length; j++){
