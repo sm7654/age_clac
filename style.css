@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(0, 0%, 94%);
+    display: grid;
+    place-items: center;
+}
+.conteiner {
+    width: min(98%, 700px);
+    height: fit-content;
+    background-color: white;
+    border-radius: 15px;
+    border-bottom-right-radius: 180px;
+    padding: 40px;
+}
+.UserDate_submitButton_wraper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.UserDate_wraper {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    font-weight: 700;
+    gap: 20px;
+    color: #8b8b8b;
+    position: relative;
+}
+.error_on {
+    color:  hsl(0, 100%, 67%);
+}
+.title_date_input_wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.title {
+    font-size: 11.5px;
+    letter-spacing: 2px;
+}
+.input {
+    padding: 10px;
+    padding-left: 15px;
+    width: 120px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+    font-weight: 700;
+    font-size: 25px;
+    color: hsl(0, 0%, 8%);
+}
+.input:focus{
+    outline: 1px solid hsl(259, 100%, 65%);
+}
+.input::placeholder {
+    color: #8b8b8b;
+}
+.error_on_input {
+    border: 1px solid hsl(0, 100%, 67%);
+}
+.error_messege {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+
+.submitButton_wraper {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.submitButton_wraper::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: hsl(0, 0%, 86%);
+}
+.submit_button {
+    background: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+    place-self: end;
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.submit_button:hover {
+    background: black;
+    box-shadow: 0px 0px 20px #f2f2;
+}
+.submit_button:focus {
+    background: black;
+    box-shadow: 0px 0px 20px #f2f2;
+    outline: none;
+}
+.submit_button > img {
+    width: 35px;
+    height: 35px;
+}
+
+
+
+.age_result_wraper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.result_p {
+    font-size: 65px;
+    font-weight: 800;
+    font-style: italic;
+    color: hsl(0, 0%, 8%);
+    height: fit-content;
+}
+.result {
+    color: hsl(259, 100%, 65%);
+    letter-spacing: 11px;
+    height: fit-content;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 510px) {
+    .result_p {
+        font-size: 35px;
+    }
+    .input {
+        width: 100%;
+        padding: 10px;
+        font-size: 22px;
+    }
+    .UserDate_submitButton_wraper {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .error_messege {
+        font-size: 9px;
+    }
+    .submit_button {
+        width: 60px;
+        height: 60px;
+        place-self: center;
+    }
+}

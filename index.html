@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<section class="conteiner">
+  <div class="UserDate_submitButton_wraper">
+    <aside class="UserDate_wraper">
+
+      <div class="day_wraper title_date_input_wraper">
+        <p class="title">DAY</p>
+        <input class="input input_day" type="text" id="days" placeholder="DD">
+        <p class="Error_message_day error_messege"></p>
+      </div>
+
+
+      <div class="month_wraper title_date_input_wraper">
+        <p class="title">MONTH</p>
+        <input class="input input_month" type="text" id="month" placeholder="MM">
+        <p class="Error_message_month error_messege"></p>
+      </div>
+
+
+      <div class="year_wraper title_date_input_wraper">
+        <p class="title">YEAR</p>
+        <input class="input input_year" type="text" id="year" placeholder="YYYY">
+        <p class="Error_message_year error_messege"></p>
+      </div>
+    </aside>
+
+
+
+    <aside class="submitButton_wraper">
+      <button class="submit_button" id="submitBtn"><img src="./assets/images/icon-arrow.svg" alt=""></button>
+    </aside>
+  </div>
+
+
+
+
+  <div class="age_result_wraper">
+    <p class="year_result result_p"><span class="result_of_year result" id="age_years">--</span>years</p>
+    <p class="month_result result_p"><span class="result_of_year result" id="age_months">--</span>months</p>
+    <p class="month_result result_p"><span class="result_of_day result" id="age_days">--</span>days</p>
+  </div>
+  </section>
+
+  <script src="./age calc.js"></script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/sm7654">Sm7654</a>.
+  </div>
+</body>
+</html>
