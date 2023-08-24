@@ -18,6 +18,9 @@ function metric_check(x) {
             return true;
         }
     }
+    if (x === ""){
+        return true;
+    }
     return false;
 }
 
@@ -25,18 +28,30 @@ function metric_check(x) {
 function error_year() {
     document.getElementsByClassName("year_wraper")[0].classList.add("error_on");
     document.getElementsByClassName("input_year")[0].classList.add("error_on_input");
-    document.getElementsByClassName("Error_message_year")[0].innerHTML = "Must be in the past";
+    if (document.getElementById('year').value === "") {
+        document.getElementsByClassName("Error_message_year")[0].innerHTML = "This field is required";
+    } else {
+        document.getElementsByClassName("Error_message_year")[0].innerHTML = "Invalid year";
+    }
 }
 function error_month() {
-        document.getElementsByClassName("month_wraper")[0].classList.add("error_on");
-        document.getElementsByClassName("input_month")[0].classList.add("error_on_input");
+    document.getElementsByClassName("month_wraper")[0].classList.add("error_on");
+    document.getElementsByClassName("input_month")[0].classList.add("error_on_input");
+    if (document.getElementById('month').value === "") {
+        document.getElementsByClassName("Error_message_month")[0].innerHTML = "This field is required";
+    } else {
         document.getElementsByClassName("Error_message_month")[0].innerHTML = "Must be a valid month";    
+    }
 }
 function error_day() {
-        document.getElementsByClassName("day_wraper")[0].classList.add("error_on");
-        document.getElementsByClassName("input_day")[0].classList.add("error_on_input");
-        document.getElementsByClassName("Error_message_day")[0].innerHTML = "Must be a valid day";
-}
+    document.getElementsByClassName("day_wraper")[0].classList.add("error_on");
+    document.getElementsByClassName("input_day")[0].classList.add("error_on_input");
+    document.getElementsByClassName("month_wraper")[0].classList.add("error_on");
+    if (document.getElementById('days').value === "") {
+        document.getElementsByClassName("Error_message_day")[0].innerHTML = "This field is required";
+    } else {
+        document.getElementsByClassName("Error_message_day")[0].innerHTML = "Must be a valid month";    
+    }}
 function date_scan(User_year, User_month, User_days) {
     var ok = 0;
     if (User_year > Current_year) {
